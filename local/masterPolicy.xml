@@ -8,4 +8,12 @@
 			<AS100_RS/>
 		</any>
 	</apiname1>
+	<apiname2 ctx="ANY">
+		<any>
+			<ROUTE id="AS200"/>
+			<SERVICE id="AS200"/>
+			<AS200_RQ/>
+			<AS200_RS/>
+		</any>
+	</apiname2>
 	</MasterPolicy>
