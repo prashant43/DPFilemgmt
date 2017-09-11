@@ -8,7 +8,7 @@
 			<AS100_RS/>
 		</any>
 	</apiname1>
-	<apiname2 ctx="AUTHZ">
+	<apiname2 ctx="ANY">
 		<any>
 			<ROUTE id="AS200"/>
 			<SERVICE id="AS200"/>
