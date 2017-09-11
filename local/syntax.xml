@@ -15,4 +15,15 @@
 			<return name="apirespparam3" maxlength="10"/>
 		</return>
 	</operation>
+	<operation name="apiname2">
+		<param name="apiparameter1" minlength="12" maxlength="12"/>
+		<param name="apiparameter2" maxlength="40" default="none"/>
+		<param name="apiparameter3" maxlength="40" default="none"/>
+		<param name="apiparameter4" minlength="1" maxlength="10"/>
+		<return name="result" type="object">
+			<return name="apirespparam1" minlength="10" maxlength="10"/>
+			<return name="apirespparam2" minlength="12" maxlength="12"/>
+			<return name="apirespparam3" maxlength="10"/>
+		</return>
+	</operation>
 	</syntax>
