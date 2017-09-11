@@ -1,0 +1,188 @@
+<datapower-configuration version="3"><export-details><description>Exported Configuration</description><user>prashant</user><domain>Sea</domain><comment/><product-id>5725</product-id><product>IDG</product><display-product>IDG</display-product><model>IBM DataPower Gateway</model><display-model>IBM DataPower Gateway</display-model><device-name>IBM DataPower Gateway</device-name><serial-number>0000000</serial-number><firmware-version>IDG.7.5.2.0</firmware-version><display-firmware-version>IDG.7.5.2.0</display-firmware-version><firmware-build>281259</firmware-build><firmware-timestamp>2016/09/28 23:53:11</firmware-timestamp><current-date>2017-02-17</current-date><current-time>10:31:11 EST</current-time><reset-date>2017-02-17</reset-date><reset-time>07:50:29 EST</reset-time><login-message/><custom-ui-file/></export-details><interface-data><interface name="eth0" type="Ethernet" vers="ipv4" ip-addr="192.168.63.128"/></interface-data><configuration domain="Sea"><HTTPUserAgent name="default" intrinsic="true" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<UserSummary>Default User Agent</UserSummary>
+<MaxRedirects>8</MaxRedirects>
+<Timeout>300</Timeout></HTTPUserAgent><XMLManager name="default" intrinsic="true" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<UserSummary>Default XML-Manager</UserSummary>
+<CacheSize>256</CacheSize>
+<SHA1Caching>on</SHA1Caching>
+<StaticDocumentCalls>on</StaticDocumentCalls>
+<SearchResults>on</SearchResults>
+<SupportTxWarn>off</SupportTxWarn>
+<Memoization>on</Memoization>
+<ParserLimitsBytesScanned>4194304</ParserLimitsBytesScanned>
+<ParserLimitsElementDepth>512</ParserLimitsElementDepth>
+<ParserLimitsAttributeCount>128</ParserLimitsAttributeCount>
+<ParserLimitsMaxNodeSize>33554432</ParserLimitsMaxNodeSize>
+<ParserLimitsForbidExternalReferences>on</ParserLimitsForbidExternalReferences>
+<ParserLimitsExternalReferences>forbid</ParserLimitsExternalReferences>
+<ParserLimitsMaxPrefixes>1024</ParserLimitsMaxPrefixes>
+<ParserLimitsMaxNamespaces>1024</ParserLimitsMaxNamespaces>
+<ParserLimitsMaxLocalNames>60000</ParserLimitsMaxLocalNames>
+<DocCacheMaxDocs>5000</DocCacheMaxDocs>
+<DocCacheSize>0</DocCacheSize>
+<DocMaxWrites>32768</DocMaxWrites>
+<UserAgent class="HTTPUserAgent">default</UserAgent></XMLManager><Matching name="GetCountryDetails_Policy_request_match_rule" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<MatchRules>
+<Type>xpath</Type>
+<HttpTag/>
+<HttpValue/>
+<Url/>
+<ErrorCode/>
+<XPATHExpression>/getCurrencyCodeByCurrencyName </XPATHExpression>
+<Method>default</Method>
+<CustomMethod/></MatchRules>
+<MatchRules>
+<Type>xpath</Type>
+<HttpTag/>
+<HttpValue/>
+<Url/>
+<ErrorCode/>
+<XPATHExpression>/getCurrencybyCountry</XPATHExpression>
+<Method>default</Method>
+<CustomMethod/></MatchRules>
+<MatchRules>
+<Type>xpath</Type>
+<HttpTag/>
+<HttpValue/>
+<Url/>
+<ErrorCode/>
+<XPATHExpression>/getISOCountrycodebyCountry</XPATHExpression>
+<Method>default</Method>
+<CustomMethod/></MatchRules>
+<MatchRules>
+<Type>xpath</Type>
+<HttpTag/>
+<HttpValue/>
+<Url/>
+<ErrorCode/>
+<XPATHExpression>/getTimezonebyCountry</XPATHExpression>
+<Method>default</Method>
+<CustomMethod/></MatchRules>
+<MatchWithPCRE>off</MatchWithPCRE>
+<CombineWithOr>on</CombineWithOr></Matching><HTTPInputConversionMap name="Json2Jsonx" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<DefaultInputEncoding>json</DefaultInputEncoding></HTTPInputConversionMap><StylePolicyAction name="GetCountryDetails_Policy_request_rule_convert-http_0" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<Type>convert-http</Type>
+<Input>INPUT</Input>
+<TransformLanguage>none</TransformLanguage>
+<ActionDebug persisted="false">off</ActionDebug>
+<Output>PIPE</Output>
+<NamedInOutLocationType>default</NamedInOutLocationType>
+<InputConversion class="HTTPInputConversionMap">Json2Jsonx</InputConversion>
+<SSLClientConfigType>proxy</SSLClientConfigType>
+<Transactional>off</Transactional>
+<SOAPValidation>body</SOAPValidation>
+<SQLSourceType>static</SQLSourceType>
+<JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+<Asynchronous>off</Asynchronous>
+<ResultsMode>first-available</ResultsMode>
+<RetryCount>0</RetryCount>
+<RetryInterval>1000</RetryInterval>
+<MultipleOutputs>off</MultipleOutputs>
+<IteratorType>XPATH</IteratorType>
+<Timeout>0</Timeout>
+<MethodRewriteType>GET</MethodRewriteType>
+<MethodType>POST</MethodType>
+<MethodType2>POST</MethodType2></StylePolicyAction><StylePolicyAction name="GetCountryDetails_Policy_request_rule_1_results_0" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<Type>results</Type>
+<Input>PIPE</Input>
+<TransformLanguage>none</TransformLanguage>
+<ActionDebug persisted="false">off</ActionDebug>
+<NamedInOutLocationType>default</NamedInOutLocationType>
+<SSLClientConfigType>proxy</SSLClientConfigType>
+<OutputType>default</OutputType>
+<Transactional>off</Transactional>
+<SOAPValidation>body</SOAPValidation>
+<SQLSourceType>static</SQLSourceType>
+<JWSVerifyStripSignature>on</JWSVerifyStripSignature>
+<Asynchronous>off</Asynchronous>
+<ResultsMode>first-available</ResultsMode>
+<RetryCount>0</RetryCount>
+<RetryInterval>1000</RetryInterval>
+<MultipleOutputs>off</MultipleOutputs>
+<IteratorType>XPATH</IteratorType>
+<Timeout>0</Timeout>
+<MethodRewriteType>GET</MethodRewriteType>
+<MethodType>POST</MethodType>
+<MethodType2>POST</MethodType2></StylePolicyAction><StylePolicyRule name="GetCountryDetails_Policy_request_rule" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<Direction>request-rule</Direction>
+<InputFormat>none</InputFormat>
+<OutputFormat>none</OutputFormat>
+<NonXMLProcessing>off</NonXMLProcessing>
+<Unprocessed>off</Unprocessed>
+<Actions class="StylePolicyAction">GetCountryDetails_Policy_request_rule_convert-http_0</Actions>
+<Actions class="StylePolicyAction">GetCountryDetails_Policy_request_rule_1_results_0</Actions></StylePolicyRule><StylePolicy name="GetCountryDetails_Policy" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<DefStylesheetForSoap>store:///filter-reject-all.xsl</DefStylesheetForSoap>
+<DefStylesheetForXsl>store:///identity.xsl</DefStylesheetForXsl>
+<DefXQueryForJSON>store:///reject-all-json.xq</DefXQueryForJSON>
+<PolicyMaps>
+<Match class="Matching">GetCountryDetails_Policy_request_match_rule</Match>
+<Rule class="StylePolicyRule">GetCountryDetails_Policy_request_rule</Rule></PolicyMaps></StylePolicy><XMLFirewallService name="GetCountryDetails" xmlns:env="http://www.w3.org/2003/05/soap-envelope" xmlns:dp="http://www.datapower.com/schemas/management">
+<mAdminState>enabled</mAdminState>
+<LocalAddress>0.0.0.0</LocalAddress>
+<UserSummary>get details on the country by invoking different backend webservices</UserSummary>
+<Priority>normal</Priority>
+<LocalPort>2049</LocalPort>
+<HTTPTimeout>120</HTTPTimeout>
+<HTTPPersistTimeout>180</HTTPPersistTimeout>
+<DoHostRewrite>on</DoHostRewrite>
+<SuppressHTTPWarnings>off</SuppressHTTPWarnings>
+<HTTPCompression>off</HTTPCompression>
+<HTTPIncludeResponseTypeEncoding>off</HTTPIncludeResponseTypeEncoding>
+<AlwaysShowErrors>off</AlwaysShowErrors>
+<DisallowGet>off</DisallowGet>
+<DisallowEmptyResponse>off</DisallowEmptyResponse>
+<HTTPPersistentConnections>on</HTTPPersistentConnections>
+<HTTPClientIPLabel>X-Client-IP</HTTPClientIPLabel>
+<HTTPLogCorIDLabel>X-Global-Transaction-ID</HTTPLogCorIDLabel>
+<HTTPProxyPort>800</HTTPProxyPort>
+<HTTPVersion>
+<Front>HTTP/1.1</Front>
+<Back>HTTP/1.1</Back></HTTPVersion>
+<DoChunkedUpload>off</DoChunkedUpload>
+<DefaultParamNamespace>http://www.datapower.com/param/config</DefaultParamNamespace>
+<QueryParamNamespace>http://www.datapower.com/param/query</QueryParamNamespace>
+<ForcePolicyExec>off</ForcePolicyExec>
+<MonitorProcessingPolicy>terminate-at-first-throttle</MonitorProcessingPolicy>
+<DebugMode persisted="false">off</DebugMode>
+<DebuggerType>internal</DebuggerType>
+<DebugHistory>25</DebugHistory>
+<WebGUIMode>off</WebGUIMode>
+<Type>dynamic-backend</Type>
+<XMLManager class="XMLManager">default</XMLManager>
+<StylePolicy class="StylePolicy">GetCountryDetails_Policy</StylePolicy>
+<MaxMessageSize>0</MaxMessageSize>
+<RequestType>json</RequestType>
+<ResponseType>xml</ResponseType>
+<RequestAttachments>strip</RequestAttachments>
+<ResponseAttachments>strip</ResponseAttachments>
+<RootPartNotFirstAction>process-in-order</RootPartNotFirstAction>
+<FrontAttachmentFormat>dynamic</FrontAttachmentFormat>
+<BackAttachmentFormat>dynamic</BackAttachmentFormat>
+<MIMEHeaders>on</MIMEHeaders>
+<RewriteErrors>on</RewriteErrors>
+<DelayErrors>on</DelayErrors>
+<DelayErrorsDuration>1000</DelayErrorsDuration>
+<SOAPSchemaURL>store:///schemas/soap-envelope.xsd</SOAPSchemaURL>
+<WSDLResponsePolicy>off</WSDLResponsePolicy>
+<FirewallParserLimits>off</FirewallParserLimits>
+<ParserLimitsBytesScanned>4194304</ParserLimitsBytesScanned>
+<ParserLimitsElementDepth>512</ParserLimitsElementDepth>
+<ParserLimitsAttributeCount>128</ParserLimitsAttributeCount>
+<ParserLimitsMaxNodeSize>33554432</ParserLimitsMaxNodeSize>
+<ParserLimitsForbidExternalReferences>on</ParserLimitsForbidExternalReferences>
+<ParserLimitsMaxPrefixes>1024</ParserLimitsMaxPrefixes>
+<ParserLimitsMaxNamespaces>1024</ParserLimitsMaxNamespaces>
+<ParserLimitsMaxLocalNames>60000</ParserLimitsMaxLocalNames>
+<ParserLimitsAttachmentByteCount>2000000000</ParserLimitsAttachmentByteCount>
+<ParserLimitsAttachmentPackageByteCount>0</ParserLimitsAttachmentPackageByteCount>
+<ParserLimitsExternalReferences>forbid</ParserLimitsExternalReferences>
+<CredentialCharset>protocol</CredentialCharset>
+<SSLConfigType>proxy</SSLConfigType></XMLFirewallService></configuration><files><file name="webgui:///clixform.xsl" src="dp-aux/clixform.xsl" location="dp-aux" internal="true" hash="8Mu7nWDBjll3/udtF0FyJ06J8pA="/><file name="webgui:///SchemaUtil.xsl" src="dp-aux/SchemaUtil.xsl" location="dp-aux" internal="true" hash="YWjVARwxJCW3zkIbcgQw2UJL1kM="/><file name="webgui:///management.xsl" src="dp-aux/management.xsl" location="dp-aux" internal="true" hash="jaVBcAZOZmnnAJfQcSbjdqhK1ks="/><file name="webgui:///map-dmz.xsl" src="dp-aux/map-dmz.xsl" location="dp-aux" internal="true" hash="n00B2bmGoH6OdSOW1QRz/SNVbYc="/><file name="webgui:///drMgmt.xml" src="dp-aux/drMgmt.xml" location="dp-aux" internal="true" hash="gckGYmBCmvYCh536mxl+GD2WxSk="/><file name="webgui:///basetypes.xml" src="dp-aux/basetypes.xml" location="dp-aux" internal="true" hash="UkIc6sKzykqNpmVlsHF89TLn2Qo="/></files></datapower-configuration>

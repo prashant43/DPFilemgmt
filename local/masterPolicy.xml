@@ -1,0 +1,11 @@
+<MasterPolicy>
+	
+	<apiname1 ctx="ANY">
+		<any>
+			<ROUTE id="AS100"/>
+			<SERVICE id="AS100"/>
+			<AS100_RQ/>
+			<AS100_RS/>
+		</any>
+	</apiname1>
+	</MasterPolicy>
